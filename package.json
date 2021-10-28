@@ -1,0 +1,33 @@
+{
+  "name": "pcat",
+  "version": "1.0.0",
+  "description": "Pcat Photo App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OMER-KALEM/PCAT.git"
+  },
+  "keywords": [
+    "pcat",
+    "photo",
+    "camera"
+  ],
+  "author": "Omer KALEM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OMER-KALEM/PCAT/issues"
+  },
+  "homepage": "https://github.com/OMER-KALEM/PCAT#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14",
+    "prettier": "2.4.1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
