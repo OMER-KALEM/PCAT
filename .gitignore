@@ -125,6 +125,9 @@ dist
 #Temporary folders
 temp/
 
+#summary
+public/uploads
+
 ### Node Patch ###
 # Serverless Webpack directories
 .webpack/
