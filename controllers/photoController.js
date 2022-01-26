@@ -29,7 +29,8 @@ exports.getPhoto = async (req, res) => {
 
 exports.createPhoto = async (req, res) => {
   let uploadImage = req.files.image;
-  let uploadPath = __dirname + '/../public/uploads/' + uploadImage.name;
+  let uploadPath = __dirname + '/../uploads/' + uploadImage.name;
+  console.log(uploadPath);
 
   uploadImage.mv(uploadPath, async () => {
     await Photo.create({
