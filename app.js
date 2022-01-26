@@ -8,13 +8,17 @@ const photoController = require('./controllers/photoController');
 const pageController = require('./controllers/pageController');
 
 const app = express();
-const port = 3000;
 
 //DB Connect
-mongoose.connect('mongodb://localhost/pcat-test-db', {
+mongoose.connect('mongodb+srv://OMER-KALEM:a8xC5JTkrtFFR2kL@cluster0.m6pgj.mongodb.net/pcat-db?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+}).then(() => {
+  console.log('DB CONNECTED');
+}).catch((err) => {
+  console.log('DB NOT CONNECTED');
+  console.log(err);
+})
 
 //TEMPLATE ENGINE
 app.set('view engine', 'ejs');
@@ -41,6 +45,8 @@ app.post('/photos', photoController.createPhoto);
 app.put('/photos/:id', photoController.updatePhoto);
 app.delete('/photos/:id', photoController.deletePhoto);
 //#endregion
+
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`Sunucu ${port} portunda başlatıldı... `);
